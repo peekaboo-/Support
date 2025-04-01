@@ -34,6 +34,8 @@ android {
 
 dependencies {
 
+    api(fileTree("libs") { include("*.jar", "*.aar") })
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

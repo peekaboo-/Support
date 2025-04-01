@@ -37,7 +37,9 @@ android {
 
 dependencies {
 
-    implementation(":Third")
+    api(fileTree("libs") { include("*.jar", "*.aar") })
+
+//    api(project(":Third"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,4 +47,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+//    implementation("com.github.peekaboo-:Support:V1.0")
 }
